@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>用户中心</title>
+		<link rel="stylesheet" href="common/vant.min.css" />
+		<script src="common/vue.js"></script>
+		<script src="common/vant.min.js"></script>
+		<script src="common/axios.min.js"></script>
+		<script src="common/Session.js"></script>
+		<script src="common/Tools.js"></script>
+		<script src="common/Validate.js"></script>
+		<script src="common/Page.js"></script>
+		<script src="common/Http.js"></script>
+		<script src="common/index.umd.js"></script>
+		<link rel="stylesheet" href="common/diygw-ui/index.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div class="container container23496">
+				<div class="flex diygw-col-24 justify-between items-center flex-nowrap flex3-clz">
+					<img src="./static/smpng" class="image-size diygw-image diygw-col-0 image-clz" mode="aspectFit" />
+					<div class="flex diygw-col-17 justify-end items-center flex-nowrap flex4-clz">
+						<img src="./static/sfpng" class="image1-size diygw-image diygw-col-0" mode="aspectFit" />
+						<img src="./static/szpng" class="image3-size diygw-image diygw-col-0 image3-clz" mode="aspectFit" />
+						<div class="flex diygw-col-0">
+							<div class="diygw-tag margin-xs radius">
+								<img class="diygw-tag-img" src="./static/icon8_qd.png" />
+								<span> 签到 </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex diygw-col-24 items-center flex-nowrap flex5-clz">
+					<div class="flex diygw-col-0 avatar2-clz">
+						<div class="diygw-avatar avatar2-avatar radius bg-none">
+							<img mode="aspectFit" class="diygw-avatar-img radius" src="./static/favicon.png" />
+						</div>
+					</div>
+					<div class="flex flex-wrap diygw-col-17 flex-direction-column flex7-clz">
+						<div class="diygw-col-24 diygw-text-lg">DIY可视化</div>
+						<div class="flex diygw-col-24">
+							<div class="diygw-tag margin-xs xs radius bg-orange">
+								<span> 勋章 2 </span>
+							</div>
+							<div class="diygw-tag margin-xs xs radius bg-orange">
+								<span> 证书 2 </span>
+							</div>
+						</div>
+					</div>
+					<img src="./static/rightpng" class="image2-size diygw-image diygw-col-0" mode="aspectFit" />
+				</div>
+				<div class="flex diygw-col-24">
+					<div class="diygw-list">
+						<div style="" class="diygw-item col-25 flex-direction-column list1-item-clz">
+							<div class="content">
+								<div class="title">100</div>
+								<div class="text-sm remark">我的笔记</div>
+							</div>
+						</div>
+						<div style="" class="diygw-item col-25 flex-direction-column list1-item-clz">
+							<div class="content">
+								<div class="title">9999</div>
+								<div class="text-sm remark">获赞</div>
+							</div>
+						</div>
+						<div style="" class="diygw-item col-25 flex-direction-column list1-item-clz">
+							<div class="content">
+								<div class="title">9999</div>
+								<div class="text-sm remark">关注我的人</div>
+							</div>
+						</div>
+						<div style="" class="diygw-item col-25 flex-direction-column list1-item-clz">
+							<div class="content">
+								<div class="title">500</div>
+								<div class="text-sm remark">关注我的人</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex2-clz">
+					<div class="diygw-title flex diygw-col-24">
+						<div class="title font-normal">我的账户</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-grid col-4">
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid4-item-clz">
+									<div class="diygw-grid-title">创作首页</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid4-item-clz">
+									<div class="diygw-grid-title">数据助手</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid4-item-clz">
+									<div class="diygw-grid-title">收益提现</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid4-item-clz">
+									<div class="diygw-grid-title">草稿箱</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+					<div class="diygw-title flex diygw-col-24">
+						<div class="title font-normal">更多服务</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-grid col-4">
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">皮肤</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">订单</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">反馈</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">钱包</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">评论</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">安全</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">隐私</div>
+								</div>
+							</div>
+							<div class="diygw-grid-item">
+								<div class="diygw-grid-inner grid3-item-clz">
+									<div class="diygw-grid-title">公益</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+					<div class="diygw-title flex diygw-col-24">
+						<div class="title font-normal">学习成就</div>
+					</div>
+					<div class="flex diygw-col-24">
+						<div class="diygw-list">
+							<div style="" class="diygw-item col-25 flex-direction-column list-item-clz">
+								<div class="diygw-avatar list-icon-clz diy-icon-time"></div>
+								<div class="content">
+									<div class="title">学习数据</div>
+									<div class="text-sm remark">100天</div>
+								</div>
+							</div>
+							<div style="" class="diygw-item col-25 flex-direction-column list-item-clz">
+								<div class="diygw-avatar list-icon-clz diy-icon-medal"></div>
+								<div class="content">
+									<div class="title">勋章</div>
+									<div class="text-sm remark">2枚</div>
+								</div>
+							</div>
+							<div style="" class="diygw-item col-25 flex-direction-column list-item-clz">
+								<div class="diygw-avatar list-icon-clz diy-icon-selection"></div>
+								<div class="content">
+									<div class="title">证书</div>
+									<div class="text-sm remark"></div>
+								</div>
+							</div>
+							<div style="" class="diygw-item col-25 flex-direction-column list-item-clz">
+								<div class="diygw-avatar list-icon-clz diy-icon-coin">
+									<div class="diygw-tag badge empty list-badge-3 red"></div>
+								</div>
+								<div class="content">
+									<div class="title">积分</div>
+									<div class="text-sm remark">100分</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-wrap diygw-col-24 flex-direction-column flex6-clz">
+					<div class="flex diygw-col-24">
+						<div class="diygw-list small">
+							<div style="" class="diygw-item col-100 row arrow solid-bottom solid-small-bottom list4-item-clz">
+								<div class="content">
+									<div class="title">推荐给好友</div>
+									<div class="text-sm remark">邀请即可得20元优惠券</div>
+								</div>
+							</div>
+							<div style="" class="diygw-item col-100 row arrow solid-bottom solid-small-bottom list4-item-clz">
+								<div class="content">
+									<div class="title">关于DIY可视化</div>
+									<div class="text-sm remark"></div>
+								</div>
+							</div>
+							<div style="" class="diygw-item col-100 row arrow solid-bottom solid-small-bottom list4-item-clz">
+								<div class="content">
+									<div class="title">帮助中心</div>
+									<div class="text-sm remark"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="version text-grey flex-direction-column flex diygw-col-24 justify-center align-center">
+					<div>DIY官网代码生成器生成</div>
+					<div>http://www.diygw.com</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</body>
+	<script type="module">
+		const app = Vue.createApp({
+			data() {
+				return {};
+			},
+			created() {
+				this.init();
+			},
+			methods: {
+				async init() {}
+			}
+		});
+		app.use(vant);
+		app.use(DiygwLib);
+		app.config.globalProperties.$tools = new Tools();
+		app.config.globalProperties.$http = httpService;
+		app.config.globalProperties.$session = Session;
+		app.mixin({
+			methods: {
+				Validate,
+				setData,
+				navigateTo,
+				showModal,
+				showToast,
+				uploadImage
+			}
+		});
+		app.mount('#app');
+	</script>
+	<style>
+		.flex3-clz {
+			z-index: 1000;
+		}
+		.image-clz {
+			margin-left: 10px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		.image-size {
+			height: 24px !important;
+			width: 24px !important;
+		}
+		.flex4-clz {
+			z-index: 1000;
+		}
+		.image1-size {
+			height: 24px !important;
+			width: 24px !important;
+		}
+		.image3-clz {
+			margin-left: 15px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-right: 0px;
+		}
+		.image3-size {
+			height: 24px !important;
+			width: 24px !important;
+		}
+		.flex5-clz {
+			z-index: 1000;
+		}
+		.avatar2-clz {
+			padding-top: 2px;
+			border-bottom-left-radius: 50%;
+			padding-left: 2px;
+			padding-bottom: 2px;
+			border-top-right-radius: 50%;
+			margin-right: 5px;
+			margin-left: 10px;
+			box-shadow: 0px 1px 3px 1px rgba(31, 31, 31, 0.16);
+			overflow: hidden;
+			border-top-left-radius: 50%;
+			margin-top: 5px;
+			border-bottom-right-radius: 50%;
+			margin-bottom: 5px;
+			padding-right: 2px;
+		}
+		.avatar2-avatar {
+			border: solid;
+		}
+		.flex7-clz {
+			z-index: 1000;
+		}
+		.image2-size {
+			height: 30px !important;
+			width: 30px !important;
+		}
+		.flex2-clz {
+			margin-left: 15px;
+			border-bottom-left-radius: 10px;
+			box-shadow: 0px 1px 3px 2px rgba(149, 149, 149, 0.26);
+			z-index: 1000;
+			overflow: hidden;
+			width: calc(100% - 15px - 15px) !important;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 15px;
+		}
+		.grid4-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.grid4-icon-clz {
+			font-size: calc(40px - 4px) !important;
+
+			width: 40px;
+			height: 40px;
+		}
+		.flex1-clz {
+			margin-left: 15px;
+			border-bottom-left-radius: 10px;
+			box-shadow: 0px 1px 3px 2px rgba(149, 149, 149, 0.26);
+			z-index: 1000;
+			overflow: hidden;
+			width: calc(100% - 15px - 15px) !important;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 15px;
+		}
+		.grid3-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.grid3-icon-clz {
+			font-size: calc(40px - 4px) !important;
+
+			width: 40px;
+			height: 40px;
+		}
+		.flex-clz {
+			margin-left: 15px;
+			border-bottom-left-radius: 10px;
+			box-shadow: 0px 1px 3px 2px rgba(149, 149, 149, 0.26);
+			z-index: 1000;
+			overflow: hidden;
+			width: calc(100% - 15px - 15px) !important;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 15px;
+		}
+		.list-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.list-item-clz .list-icon-clz {
+			width: 40px;
+			height: 40px;
+			font-size: calc(40px - 4px) !important;
+		}
+
+		.list-badge-3 {
+			right: 2px;
+		}
+		.flex6-clz {
+			margin-left: 15px;
+			border-bottom-left-radius: 10px;
+			box-shadow: 0px 1px 3px 2px rgba(149, 149, 149, 0.26);
+			z-index: 1000;
+			overflow: hidden;
+			width: calc(100% - 15px - 15px) !important;
+			border-top-left-radius: 10px;
+			margin-top: 8px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-bottom: 8px;
+			margin-right: 15px;
+		}
+		.list4-item-clz {
+			margin: 0px;
+			padding: 10px;
+		}
+		.list4-item-clz .list4-icon-clz {
+			width: 40px;
+			height: 40px;
+			font-size: calc(40px - 4px) !important;
+		}
+		.container23496 {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.container23496 {
+		}
+	</style>
+</html>
